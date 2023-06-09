@@ -17,6 +17,9 @@ type CreatedOpeningRequest struct {
 }
 
 func (r *CreatedOpeningRequest) Validate() error {
+	if r.Role == "" && r.Company == "" && r.Location == "" && r.Remote == nil && r.Salary <= 0 && r.Link == "" {
+		return fmt.Errorf("malformed request body")
+	}
 	if r.Role == "" {
 		return errParamRequired("role", "string")
 	}
