@@ -19,6 +19,8 @@ A custom logger has been developed for various data returns and endpoint informa
 
 Additionally, a custom data validation mechanism has been created without using external libraries, to validate data in the JSON structure.
 
+A Makefile has also been created to facilitate the creation of custom commands and to assist in streamlining the development process.
+
 
 ## Swagger
 
